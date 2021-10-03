@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/vendors/css/open-color.css">
   <link rel="stylesheet" href="assets/vendors/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="assets/vendors/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/vendors/primer/tooltips.css">
   <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
@@ -153,19 +154,35 @@
           <div class="account__wrapper">
             <h5 class="account__header">신랑 측</h5>
             <div class="account__meta">
-              황성일 우리 <span class="account__number">075-250669-12-002</span>
+              황성일 우리
+              <span class="copy">
+                <span class="copied">복사됨</span>
+                <a class="account__number" data-clipboard-text="075-250669-12-002">075-250669-12-002</a>
+              </span>
             </div>
             <div class="account__meta">
-              황준우 우리 <span class="account__number">1002-340-510864</span>
+              황준우 우리
+              <span class="copy">
+                <span class="copied">복사됨</span>
+                <a class="account__number" data-clipboard-text="1002-340-510864">1002-340-510864</a>
+              </span>
             </div>
           </div>
           <div class="account__wrapper">
             <h5 class="account__header">신부 측</h5>
             <div class="account__meta">
-              김종근 우체국 <span class="account__number">700591-02-200570</span>
+              김종근 우체국
+              <span class="copy">
+                <span class="copied">복사됨</span>
+                <a class="account__number" data-clipboard-text="700591-02-200570">700591-02-200570</a>
+              </span>
             </div>
             <div class="account__meta">
-              김명아 국민 <span class="account__number">723002-00-197049</span>
+              김명아 국민
+              <span class="copy">
+                <span class="copied">복사됨</span>
+                <a class="account__number" data-clipboard-text="723002-00-197049">723002-00-197049</a>
+              </span>
             </div>
           </div>
         </section>
@@ -175,13 +192,35 @@
         </div>
 
         <section class="link">
-          <span class="link__url">myungah.junwoo.wedding</span>
+          <span class="copy">
+            <span class="copied">복사됨</span>
+            <a class="link__url" data-clipboard-text="https://myungah.junwoo.wedding">myungah.junwoo.wedding</a>
+          </span>
         </section>
 
       </div>
     </div>
   </div>
   <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7a310ba2ceb4a872d53cb905c322a234"></script>
-  <script src="assets/kakaomap.js"></script>
+  <script>
+    const targetLatLng = new kakao.maps.LatLng(35.825237470682744, 129.29089412186622)
+    const mapContainer = document.getElementById('map')
+    const mapOption = { center: targetLatLng, level: 4 }
+    const map = new kakao.maps.Map(mapContainer, mapOption)
+    const markerPosition = targetLatLng;
+    const marker = new kakao.maps.Marker({ position: markerPosition });
+    marker.setMap(map);
+  </script>
+  <script src="assets/vendors/primer/tooltips.js"></script>
+  <script src="assets/vendors/js/clipboard.min.js"></script>
+  <script>
+    const clipboard = new ClipboardJS('.copy > a');
+    clipboard.on('success', function(e) {
+      const copiedElement = e.trigger.previousElementSibling
+      copiedElement.classList.add('active')
+      window.setTimeout(() => { copiedElement.classList.remove('active') }, 1800);
+      e.clearSelection();
+  });
+  </script>
 </body>
 </html>
