@@ -146,10 +146,6 @@ html, body {
   padding-bottom: 4rem;
 }
 
-figure {
-  margin: 0;
-}
-
 .photo {
   width: 100%;
 }
@@ -212,11 +208,42 @@ figure {
 
 .contact__we {
   margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact__meta:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.contact__parents {
+  display: flex;
+  justify-content: center;
 }
 
 .contact__parents:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+
+.contact__icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.contact__icons img {
+  display: block;
+  height: 3rem;
+  padding: 0.25rem;
+}
+
+.contact__icons img:hover,
+.contact__icons img:focus {
+  cursor: pointer;
+  -webkit-filter: brightness(90%);
+  filter: brightness(90%);
+}
+
 
 /* Accounts */
 
@@ -265,7 +292,7 @@ figure {
 .link {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 }
 
 .link__url {
