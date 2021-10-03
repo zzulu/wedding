@@ -299,20 +299,25 @@ html, body {
   color: var(--oc-gray-8);
 }
 
-.copied {
+.copy > .copied {
   position: absolute;
   top: -2.25rem;
   right: 0;
-  opacity: 0;
   transition: opacity 0.2s ease 0s;
   background-color: var(--oc-gray-8);
   color: var(--oc-gray-0);
   padding: 0.25rem 0.5rem;
   font-size: 0.875em;
   border-radius: 4px;
+  display: none;
+  opacity: 0;
 }
 
-.copied.active {
+.copy > .copied.show {
+  display: initial;
+}
+
+.copy > .copied.active {
   opacity: 1;
 }
 

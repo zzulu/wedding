@@ -193,7 +193,7 @@
         <section class="link">
           <span class="copy">
             <span class="copied">복사됨</span>
-            <span class="target link__url" data-clipboard-text="https://myungah.junwoo.wedding">myungah.junwoo.wedding</span>
+            <a class="link__url" data-clipboard-text="https://myungah.junwoo.wedding">myungah.junwoo.wedding</a>
           </span>
         </section>
 
@@ -212,12 +212,16 @@
   </script>
   <script src="assets/vendors/js/clipboard.min.js"></script>
   <script>
-    const clipboard = new ClipboardJS('.copy > span.target');
+    const clipboard = new ClipboardJS('.copy > a');
     clipboard.on('success', function(e) {
       const copiedElement = e.trigger.previousElementSibling
-      copiedElement.classList.add('active')
-      window.setTimeout(() => { copiedElement.classList.remove('active') }, 1800)
-      e.clearSelection()
+      if (!copiedElement.classList.contains('show')) {
+        copiedElement.classList.add('show')
+        window.setTimeout(() => { copiedElement.classList.add('active') }, 10)
+        window.setTimeout(() => { copiedElement.classList.remove('active') }, 2010)
+        window.setTimeout(() => { copiedElement.classList.remove('show') }, 2220)
+        e.clearSelection()
+      }
   });
   </script>
 </body>
