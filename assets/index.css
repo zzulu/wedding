@@ -1,0 +1,267 @@
+@import '_fonts.css';
+
+html, body {
+  color: var(--oc-gray-8);
+  font-family: 'Eulyoo1945', serif;
+  text-align: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Divider  */
+
+.divider {
+  display: block;
+  height: 1.75rem;
+  margin: 1.5rem 0;
+}
+
+.divider > .dove {
+  height: 100%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.divider::after,
+.divider::before {
+  display: inline-block;
+  content: '';
+  height: 2px;
+  width: calc(50px + 5vw);
+  border-top: 1px solid var(--oc-gray-3);
+}
+
+/* Header */
+
+.header__drawing {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100%;
+}
+
+.header__photo {
+  width: 100%;
+}
+
+/* Introduction */
+
+.introduction {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-family: '210 Dryflower', sans-serif;
+}
+
+.introduction__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.introduction__datetime,
+.introduction__location {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.introduction__location {
+  line-height: 1.2;
+}
+
+.introduction__title > img {
+  height: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Invitation */
+
+.invitation {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.invitation__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.invitation__header > h2 {
+  font-family: '210 Dryflower', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.invitation__header > .invitation__image {
+  position: absolute;
+  height: 10rem;
+  top: 0rem;
+}
+
+.invitation__body {
+  margin-bottom: 4rem;
+}
+
+.invitation__names .names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.names__parents {
+  font-size: 1.125rem;
+  margin-right: 1.5rem;
+  line-height: 1.7;
+}
+
+.names__we {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-left: 1.25rem;
+}
+
+/* Photos */
+
+.photos {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.photo {
+  width: 100%;
+}
+
+
+/* Location */
+
+.location {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.location__address {
+  font-size: 1.125rem;
+}
+
+.location__map {
+  width: 100%;
+  height: 60vh;
+  margin: 1rem 0;
+}
+
+.location__url {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--oc-gray-8);
+  text-decoration: none;
+  background-color: var(--oc-gray-0);
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease 0s;
+}
+
+.location__url:hover,
+.location__url:focus {
+  cursor: pointer;
+  color: var(--oc-gray-8);
+  background-color: var(--oc-gray-2);
+}
+
+.location__url:active {
+  background-color: var(--oc-gray-3);
+}
+
+/* Contacts */
+
+.contact {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.contact__header {
+  margin-bottom: 1.25rem;
+}
+
+.contact__we {
+  margin-bottom: 2.5rem;
+}
+
+.contact__parents:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* Accounts */
+
+.account {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.account__wrapper:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.account__header {
+  margin-bottom: 1.25rem;
+}
+
+.account__meta {
+  margin-bottom: 1rem;
+}
+
+.meta__name {
+  margin-right: 0.5rem;
+}
+
+.account__number {
+  padding: 0.25rem 0.375rem;
+  background-color: var(--oc-gray-0);
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease 0s;
+}
+
+.account__number:hover,
+.account__number:focus {
+  cursor: pointer;
+  background-color: var(--oc-gray-2);
+}
+
+.account__number:active {
+  background-color: var(--oc-gray-3);
+}
+
+
+/* Link */
+
+.link {
+  margin-bottom: 10rem;
+}
+
+.link__url {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  background-color: var(--oc-gray-0);
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease 0s;
+}
+
+.link__url:hover,
+.link__url:focus {
+  cursor: pointer;
+  background-color: var(--oc-gray-2);
+}
+
+.link__url:active {
+  background-color: var(--oc-gray-3);
+}

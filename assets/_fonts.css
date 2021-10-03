@@ -1,0 +1,46 @@
+@font-face {
+    font-family: '210 Dryflower';
+    font-weight: 700;
+    src: local('210 Dryflower Bold'),
+    url('fonts/210_Dryflower_B.woff2') format('woff2'),
+    url('fonts/210_Dryflower_B.woff') format('woff'),
+    url('fonts/210_Dryflower_B.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '210 Dryflower';
+    font-weight: 400;
+    src: local('210 Dryflower Regular'),
+    url('fonts/210_Dryflower_R.woff2') format('woff2'),
+    url('fonts/210_Dryflower_R.woff') format('woff'),
+    url('fonts/210_Dryflower_R.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '210 Dryflower';
+    font-weight: 300;
+    src: local('210 Dryflower Light'),
+    url('fonts/210_Dryflower_L.woff2') format('woff2'),
+    url('fonts/210_Dryflower_L.woff') format('woff'),
+    url('fonts/210_Dryflower_L.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Eulyoo1945';
+    font-weight: 600;
+    src: local('Eulyoo1945 SemiBold'),
+    url('fonts/Eulyoo1945-SemiBold.woff2') format('woff2'),
+    url('fonts/Eulyoo1945-SemiBold.woff') format('woff'),
+    url('fonts/Eulyoo1945-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Eulyoo1945';
+    font-weight: 400;
+    src: local('Eulyoo1945 Regular'),
+    url('fonts/Eulyoo1945-Regular.woff2') format('woff2'),
+    url('fonts/Eulyoo1945-Regular.woff') format('woff'),
+    url('fonts/Eulyoo1945-Regular.ttf') format('truetype');
+}
+
