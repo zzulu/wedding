@@ -1,12 +1,12 @@
 // PhotoSwipe
 const pswpElement = document.getElementsByClassName('pswp')[0];
 const items = [
-    { src: 'assets/images/photos/01.jpg', w: 3299, h: 4887 },
-    { src: 'assets/images/photos/02.jpg', w: 3073, h: 4838 },
-    { src: 'assets/images/photos/03.jpg', w: 3360, h: 5040 },
-    { src: 'assets/images/photos/04.jpg', w: 2960, h: 4005 },
-    { src: 'assets/images/photos/05.jpg', w: 3172, h: 4485 },
-    { src: 'assets/images/photos/06.jpg', w: 3263, h: 4790 },
+    { src: 'assets/images/photos/01.jpg', w: 1650, h: 2444 },
+    { src: 'assets/images/photos/02.jpg', w: 1537, h: 2419 },
+    { src: 'assets/images/photos/03.jpg', w: 1680, h: 2520 },
+    { src: 'assets/images/photos/04.jpg', w: 1480, h: 2003 },
+    { src: 'assets/images/photos/05.jpg', w: 1586, h: 2243 },
+    { src: 'assets/images/photos/06.jpg', w: 1632, h: 2395 },
 ]
 
 const photos = document.getElementsByClassName('photo');
