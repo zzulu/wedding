@@ -146,6 +146,10 @@ html, body {
   padding-bottom: 4rem;
 }
 
+figure {
+  margin: 0;
+}
+
 .photo {
   width: 100%;
 }

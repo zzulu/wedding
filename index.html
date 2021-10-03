@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="assets/vendors/css/open-color.css">
   <link rel="stylesheet" href="assets/vendors/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="assets/vendors/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/vendors/css/photoswipe.css">
+  <link rel="stylesheet" href="assets/vendors/css/default-skin/default-skin.css">
   <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
@@ -87,14 +89,14 @@
 
         <section class="photos row gx-2">
           <div class="col-6">
-            <img src="assets/images/photos/01.jpg" alt="" class="photo">
-            <img src="assets/images/photos/03.jpg" alt="" class="photo">
-            <img src="assets/images/photos/05.jpg" alt="" class="photo">
+            <img src="assets/images/photos/thumbs/01.jpg" alt="Junwoo & Myungah" class="photo" data-index="1">
+            <img src="assets/images/photos/thumbs/03.jpg" alt="Junwoo & Myungah" class="photo" data-index="3">
+            <img src="assets/images/photos/thumbs/05.jpg" alt="Junwoo & Myungah" class="photo" data-index="5">
           </div>
           <div class="col-6">
-            <img src="assets/images/photos/02.jpg" alt="" class="photo">
-            <img src="assets/images/photos/04.jpg" alt="" class="photo">
-            <img src="assets/images/photos/06.jpg" alt="" class="photo">
+            <img src="assets/images/photos/thumbs/02.jpg" alt="Junwoo & Myungah" class="photo" data-index="2">
+            <img src="assets/images/photos/thumbs/04.jpg" alt="Junwoo & Myungah" class="photo" data-index="4">
+            <img src="assets/images/photos/thumbs/06.jpg" alt="Junwoo & Myungah" class="photo" data-index="6">
           </div>
         </section>
 
@@ -199,6 +201,42 @@
 
       </div>
     </div>
+
+    <!-- PhotoSwipe -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7a310ba2ceb4a872d53cb905c322a234"></script>
   <script>
@@ -224,5 +262,8 @@
       }
   });
   </script>
+  <script src="assets/vendors/js/photoswipe.min.js"></script>
+  <script src="assets/vendors/js/photoswipe-ui-default.min.js"></script>
+  <script src="assets/index.js"></script>
 </body>
 </html>
