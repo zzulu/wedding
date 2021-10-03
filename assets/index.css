@@ -141,6 +141,10 @@ html, body {
   width: 100%;
 }
 
+.photo:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
 
 /* Location */
 
