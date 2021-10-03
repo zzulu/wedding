@@ -285,8 +285,10 @@
       </div>
     </div>
   </div>
+
   <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7a310ba2ceb4a872d53cb905c322a234"></script>
   <script>
+    // KaKaomap API
     const targetLatLng = new kakao.maps.LatLng(35.825237470682744, 129.29089412186622)
     const mapContainer = document.getElementById('map')
     const mapOption = { center: targetLatLng, level: 4 }
@@ -296,19 +298,6 @@
     marker.setMap(map);
   </script>
   <script src="assets/vendors/js/clipboard.min.js"></script>
-  <script>
-    const clipboard = new ClipboardJS('.copy > a');
-    clipboard.on('success', function(e) {
-      const copiedElement = e.trigger.previousElementSibling
-      if (!copiedElement.classList.contains('show')) {
-        copiedElement.classList.add('show')
-        window.setTimeout(() => { copiedElement.classList.add('active') }, 10)
-        window.setTimeout(() => { copiedElement.classList.remove('active') }, 2010)
-        window.setTimeout(() => { copiedElement.classList.remove('show') }, 2220)
-        e.clearSelection()
-      }
-  });
-  </script>
   <script src="assets/vendors/js/photoswipe.min.js"></script>
   <script src="assets/vendors/js/photoswipe-ui-default.min.js"></script>
   <script src="assets/index.js"></script>
