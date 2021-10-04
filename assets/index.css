@@ -240,11 +240,14 @@ html, body {
 }
 
 .account__header {
-  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.account__meta {
+.account__meta:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -333,4 +336,86 @@ html, body {
 
 .link .copied {
   top: -2.75rem;
+}
+
+/* Lock */
+
+#lock__groom,
+#lock__bride {
+  display: none;
+}
+
+#lock__groom:checked ~ .lock,
+#lock__bride:checked ~ .lock {
+  background-image: url('images/icons/unlock.svg');
+}
+
+#lock__groom:checked ~ .lock {
+  background-color: var(--oc-blue-1);
+}
+
+#lock__bride:checked ~ .lock {
+  background-color: var(--oc-red-1);
+}
+
+.lock {
+  background-color: var(--oc-gray-0);
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease 0s;
+  background-image: url('images/icons/lock.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lock:hover {
+  cursor: pointer;
+  background-color: var(--oc-gray-2);
+}
+
+.meta__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.account__container {
+  position: relative;
+  padding: 1rem 1.5rem;
+}
+
+.account__cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--oc-gray-0);
+  border-radius: 4px;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.2s ease 0s;
+}
+
+.account__cover.blue {
+  background-color: var(--oc-blue-0);
+}
+
+.account__cover.red {
+  background-color: var(--oc-red-0);
+}
+
+.account__container > .account__meta {
+  opacity: 0;
+  transition: opacity 0.2s ease 0s;
+}
+
+.account__container.unlock > .account__cover {
+  opacity: 0;
+  z-index: -1;
+}
+
+.account__container.unlock > .account__meta {
+  opacity: 1;
 }

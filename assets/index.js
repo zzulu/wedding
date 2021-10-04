@@ -36,4 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
       gallery.init();
     })
   });
+
+  // Account Lock
+  const brideLock = document.getElementById('lock__bride')
+  const brideAccount = document.getElementById('bride__account')
+  brideLock.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      brideAccount.classList.add('unlock')
+    } else {
+      brideAccount.classList.remove('unlock')
+    }
+  })
+
+  const groomLock = document.getElementById('lock__groom')
+  const groomAccount = document.getElementById('groom__account')
+  groomLock.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      groomAccount.classList.add('unlock')
+    } else {
+      groomAccount.classList.remove('unlock')
+    }
+  })
+
 })
